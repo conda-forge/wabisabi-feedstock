@@ -1,5 +1,5 @@
 {% set name = "wabisabi" %}
-{% set version = "0.2.8" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 00b2a44f1b90d64dd31170d527db60b4fc7ab8927fd9fe2a6c6c585916e92b92
+  sha256: 0d3655926cd1360add5ca7301310b9fee18fa49537c68e1291e2525ae34b2b4e
 
 build:
   number: 0
@@ -16,10 +16,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
+    - python >=3.8
+    - packaging
 
 test:
   imports:
